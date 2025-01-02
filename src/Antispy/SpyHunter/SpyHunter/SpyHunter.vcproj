@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="gb2312"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="8.00"
+	Version="9.00"
 	Name="SpyHunter"
 	ProjectGUID="{5F99259E-55D7-4507-8E34-D0956DA84E8F}"
 	RootNamespace="SpyHunter"
 	Keyword="MFCProj"
+	TargetFrameworkVersion="131072"
 	>
 	<Platforms>
 		<Platform
@@ -75,6 +76,8 @@
 				AddModuleNamesToAssembly=""
 				GenerateDebugInformation="true"
 				SubSystem="2"
+				RandomizedBaseAddress="1"
+				DataExecutionPrevention="0"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -95,9 +98,6 @@
 			/>
 			<Tool
 				Name="VCAppVerifierTool"
-			/>
-			<Tool
-				Name="VCWebDeploymentTool"
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
@@ -162,6 +162,8 @@
 				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
+				RandomizedBaseAddress="1"
+				DataExecutionPrevention="0"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -181,9 +183,6 @@
 			/>
 			<Tool
 				Name="VCAppVerifierTool"
-			/>
-			<Tool
-				Name="VCWebDeploymentTool"
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
@@ -1080,15 +1079,11 @@
 				Name="Icon"
 				>
 				<File
-					RelativePath=".\res\icon\AutorunRoot.ico"
-					>
-				</File>
-				<File
 					RelativePath=".\res\AutorunRoot.ico"
 					>
 				</File>
 				<File
-					RelativePath=".\res\icon\BACK.ico"
+					RelativePath=".\res\icon\AutorunRoot.ico"
 					>
 				</File>
 				<File
@@ -1096,11 +1091,15 @@
 					>
 				</File>
 				<File
-					RelativePath=".\res\CDROOM.ico"
+					RelativePath=".\res\icon\BACK.ico"
 					>
 				</File>
 				<File
 					RelativePath=".\res\icon\CDROOM.ico"
+					>
+				</File>
+				<File
+					RelativePath=".\res\CDROOM.ico"
 					>
 				</File>
 				<File
@@ -1112,11 +1111,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\res\icon\Computer.ico"
+					RelativePath=".\res\Computer.ico"
 					>
 				</File>
 				<File
-					RelativePath=".\res\Computer.ico"
+					RelativePath=".\res\icon\Computer.ico"
 					>
 				</File>
 				<File
@@ -1132,19 +1131,19 @@
 					>
 				</File>
 				<File
-					RelativePath=".\res\icon\driver.ico"
-					>
-				</File>
-				<File
 					RelativePath=".\res\driver.ico"
 					>
 				</File>
 				<File
-					RelativePath=".\res\icon\Explorer.ico"
+					RelativePath=".\res\icon\driver.ico"
 					>
 				</File>
 				<File
 					RelativePath=".\res\Explorer.ico"
+					>
+				</File>
+				<File
+					RelativePath=".\res\icon\Explorer.ico"
 					>
 				</File>
 				<File
@@ -1160,19 +1159,19 @@
 					>
 				</File>
 				<File
-					RelativePath=".\res\icon\HardDisk.ico"
-					>
-				</File>
-				<File
 					RelativePath=".\res\HardDisk.ico"
 					>
 				</File>
 				<File
-					RelativePath=".\res\icon\IE.ico"
+					RelativePath=".\res\icon\HardDisk.ico"
 					>
 				</File>
 				<File
 					RelativePath=".\res\IE.ico"
+					>
+				</File>
+				<File
+					RelativePath=".\res\icon\IE.ico"
 					>
 				</File>
 				<File
@@ -1184,15 +1183,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\res\icon\network.ico"
-					>
-				</File>
-				<File
 					RelativePath=".\res\network.ico"
 					>
 				</File>
 				<File
-					RelativePath=".\res\icon\OpenDir.ico"
+					RelativePath=".\res\icon\network.ico"
 					>
 				</File>
 				<File
@@ -1200,11 +1195,15 @@
 					>
 				</File>
 				<File
-					RelativePath=".\res\Print.ico"
+					RelativePath=".\res\icon\OpenDir.ico"
 					>
 				</File>
 				<File
 					RelativePath=".\res\icon\Print.ico"
+					>
+				</File>
+				<File
+					RelativePath=".\res\Print.ico"
 					>
 				</File>
 				<File
@@ -1216,19 +1215,19 @@
 					>
 				</File>
 				<File
-					RelativePath=".\res\REG_DWORD.ico"
-					>
-				</File>
-				<File
 					RelativePath=".\res\icon\REG_DWORD.ico"
 					>
 				</File>
 				<File
-					RelativePath=".\res\REG_SZ.ico"
+					RelativePath=".\res\REG_DWORD.ico"
 					>
 				</File>
 				<File
 					RelativePath=".\res\icon\REG_SZ.ico"
+					>
+				</File>
+				<File
+					RelativePath=".\res\REG_SZ.ico"
 					>
 				</File>
 				<File
@@ -1240,11 +1239,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\res\icon\service.ico"
+					RelativePath=".\res\service.ico"
 					>
 				</File>
 				<File
-					RelativePath=".\res\service.ico"
+					RelativePath=".\res\icon\service.ico"
 					>
 				</File>
 				<File
@@ -1252,11 +1251,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\res\Startup.ico"
+					RelativePath=".\res\icon\Startup.ico"
 					>
 				</File>
 				<File
-					RelativePath=".\res\icon\Startup.ico"
+					RelativePath=".\res\Startup.ico"
 					>
 				</File>
 				<File
@@ -1268,19 +1267,19 @@
 					>
 				</File>
 				<File
-					RelativePath=".\res\winlogon.ico"
-					>
-				</File>
-				<File
 					RelativePath=".\res\icon\winlogon.ico"
 					>
 				</File>
 				<File
-					RelativePath=".\res\icon\winsock.ico"
+					RelativePath=".\res\winlogon.ico"
 					>
 				</File>
 				<File
 					RelativePath=".\res\winsock.ico"
+					>
+				</File>
+				<File
+					RelativePath=".\res\icon\winsock.ico"
 					>
 				</File>
 			</Filter>

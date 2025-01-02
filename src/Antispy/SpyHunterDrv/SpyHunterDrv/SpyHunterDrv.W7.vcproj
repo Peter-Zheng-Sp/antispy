@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="gb2312"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="8.00"
+	Version="9.00"
 	Name="SpyHunterDrv.W7"
 	ProjectGUID="{F318C4DB-23BA-47C4-A7B9-DD2CD1438DC7}"
 	RootNamespace="SpyHunterDrv.W7"
+	TargetFrameworkVersion="131072"
 	>
 	<Platforms>
 		<Platform
