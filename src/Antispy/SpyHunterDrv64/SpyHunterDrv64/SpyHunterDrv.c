@@ -15,6 +15,10 @@
 #include "Stdafx.h"
 #include "Logger.h"
 #include "GlobalData.h"
+#include "KernelBase.h"
+#include "VariableHub.h"
+
+extern PULONG InitSafeBootMode;
 
 VOID
 DriverUnload(
@@ -39,13 +43,35 @@ DriverEntry(
     LOG_IMPORTANT(L"Enter DriverEntry");
     DriverObject->DriverUnload = DriverUnload;
 
+    if (!*InitSafeBootMode)
+    { 
+        return STATUS_NOT_SUPPORTED;
+    }
+
     status = GlobalData_Init(DriverObject, RegistryPath);
     if (!NT_SUCCESS(status))
     {
-        LOG_FATAL(L"init global data failed, status=0x%X", status);
+        LOG_FATAL(L"GlobalData_Init failed, status=0x%X", status);
         return STATUS_UNSUCCESSFUL;
     }
 
-    LOG_IMPORTANT(L"Leave DriverEntry, status=0x%X", );
-    return status;
+    // 如果检测ntoskrnl的checksum失败，那么就返回一个特定的错误码
+    status = KernelBase_CheckKernelUpdate();
+    if (!NT_SUCCESS(status))
+    {
+        GlobalData_DeInit();
+        LOG_FATAL(L"CheckUpdate failed, status=0x%X", status);
+        return STATUS_INVALID_DISPOSITION;
+    }
+
+    status = VariableHub_Init();
+    if (!NT_SUCCESS(status))
+    {
+        GlobalData_DeInit();
+        LOG_FATAL(L"VariableHub_Init failed, status=0x%X", status);
+        return STATUS_INVALID_DISPOSITION;
+    }
+
+    LOG_IMPORTANT(L"Leave DriverEntry");
+    return STATUS_SUCCESS;
 }

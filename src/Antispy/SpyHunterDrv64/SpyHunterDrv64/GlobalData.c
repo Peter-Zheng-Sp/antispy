@@ -5,7 +5,7 @@
 #include "SystemVersion.h"
 #include "KernelBase.h"
 
-GLOBAL_DATA g_GlobalData = { 0 };
+GLOBAL_DATA g_GlobalData;
 
 static NTSTATUS InitVersion()
 {
@@ -49,9 +49,11 @@ NTSTATUS GlobalData_Init(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPa
 
     if (!DriverObject || !RegistryPath)
     {
-        LOG_ERROR(L"DriverObject=0x%llX, RegistryPath=0x%llX, Is Invalid Value", DriverObject, RegistryPath);
+        LOG_ERROR(L"DriverObject=0x%llX, RegistryPath=0x%llX, Value Invalid", DriverObject, RegistryPath);
         return STATUS_INTERNAL_ERROR;
     }
+
+    LOG_IMPORTANT(L"DriverObject=0x%llX, RegistryPath=%wZ", DriverObject, RegistryPath);
 
     g_GlobalData.pDriverObject = DriverObject;
     g_GlobalData.pRegPath = RegistryPath;
@@ -70,7 +72,7 @@ NTSTATUS GlobalData_Init(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPa
     }
 
     Utility_InitUnicodeString(&ustrAPI, VCRYPTW(L"MmGetSystemRoutineAddress"));
-    g_GlobalData.MmGetSystemRoutineAddress = MmGetSystemRoutineAddress(&ustrAPI);
+    g_GlobalData.MmGetSystemRoutineAddress = (typedef_MmGetSystemRoutineAddress)MmGetSystemRoutineAddress(&ustrAPI);
     if (!g_GlobalData.MmGetSystemRoutineAddress)
     {
         LOG_ERROR(L"Get MmGetSystemRoutineAddress Failed");

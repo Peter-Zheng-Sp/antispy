@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="W7CHECK|x64">
@@ -182,12 +182,15 @@
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\SpyHunterDrv64\SSDT.c" />
+    <ClCompile Include="..\..\SpyHunterDrv64\SystemOffset.c" />
+    <ClCompile Include="..\..\SpyHunterDrv64\VariableHub.c" />
+    <ClCompile Include="..\..\SpyHunterDrv64\LibC.c" />
     <ClCompile Include="..\..\SpyHunterDrv64\SpyHunterDrv.c" />
     <ClCompile Include="..\..\SpyHunterDrv64\SystemVersion.c" />
     <ClCompile Include="..\..\SpyHunterDrv64\GlobalData.c" />
     <ClCompile Include="..\..\SpyHunterDrv64\Logger.c" />
     <ClCompile Include="..\..\SpyHunterDrv64\Utility.c" />
-    <ClCompile Include="..\..\SpyHunterDrv64\GlobalVariables.c" />
     <ClCompile Include="..\..\SpyHunterDrv64\MemoryAllocator.c" />
     <ClCompile Include="..\..\SpyHunterDrv64\KernelBase.c" />
   </ItemGroup>
@@ -197,8 +200,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\SpyHunterDrv64\ApiDefine.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\SSDT.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\SystemOffset.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\VariableHub.h" />
     <ClInclude Include="..\..\SpyHunterDrv64\GlobalData.h" />
-    <ClInclude Include="..\..\SpyHunterDrv64\GlobalVariables.h" />
     <ClInclude Include="..\..\SpyHunterDrv64\KernelBase.h" />
     <ClInclude Include="..\..\SpyHunterDrv64\LibC.h" />
     <ClInclude Include="..\..\SpyHunterDrv64\Logger.h" />

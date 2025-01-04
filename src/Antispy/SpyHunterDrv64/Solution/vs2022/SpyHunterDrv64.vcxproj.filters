@@ -30,13 +30,22 @@
     <ClCompile Include="..\..\SpyHunterDrv64\Utility.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\SpyHunterDrv64\GlobalVariables.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\SpyHunterDrv64\MemoryAllocator.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\SpyHunterDrv64\KernelBase.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SpyHunterDrv64\VariableHub.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SpyHunterDrv64\LibC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SpyHunterDrv64\SSDT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SpyHunterDrv64\SystemOffset.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,9 +62,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\SpyHunterDrv64\GlobalData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\SpyHunterDrv64\GlobalVariables.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\SpyHunterDrv64\KernelBase.h">
@@ -80,6 +86,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\SpyHunterDrv64\Utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpyHunterDrv64\VariableHub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpyHunterDrv64\SSDT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SpyHunterDrv64\SystemOffset.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

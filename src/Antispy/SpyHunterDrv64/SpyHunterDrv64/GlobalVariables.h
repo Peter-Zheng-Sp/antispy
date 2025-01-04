@@ -1,5 +1,0 @@
-#ifndef _H_SYSTEMVARIABLES_
-#define _H_SYSTEMVARIABLES_
-
-
-#endif // _H_SYSTEMVARIABLES_

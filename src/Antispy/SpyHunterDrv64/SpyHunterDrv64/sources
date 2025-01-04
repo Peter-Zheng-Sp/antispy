@@ -92,11 +92,11 @@ SOURCES= \
         GlobalData.c       \
         Logger.c           \
         Utility.c          \
-        GlobalVariables.c  \
+        VariableHub.c      \
         MemoryAllocator.c  \
         KernelBase.c       \
         LibC.c             \
-        
+        SSDT.c             \
 
 I386_SOURCES= \
 
