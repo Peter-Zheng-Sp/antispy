@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="W7CHECK|x64">
+      <Configuration>W7CHECK</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="W7FREE|x64">
+      <Configuration>W7FREE</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="WLHCHECK|x64">
+      <Configuration>WLHCHECK</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="WLHFREE|x64">
+      <Configuration>WLHFREE</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="WXPCHECK|x64">
+      <Configuration>WXPCHECK</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="WXPFREE|x64">
+      <Configuration>WXPFREE</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AFBB11B4-DF23-4ECE-9E7D-6DDB89F2CEEF}</ProjectGuid>
+    <RootNamespace>Template</RootNamespace>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='W7FREE|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WLHFREE|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WXPFREE|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='W7CHECK|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WLHCHECK|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WXPCHECK|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='W7FREE|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='WLHFREE|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='WXPFREE|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='W7CHECK|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='WLHCHECK|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='WXPCHECK|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.32002.118</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='W7CHECK|x64'">
+    <OutDir>$(ProjectDir)..\..\output\amd64\W7_Debug\build\</OutDir>
+    <IntDir>$(ProjectDir)..\..\output\amd64\W7_Debug\build\</IntDir>
+    <NMakeBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) win7 chk</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) win7 chk</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)../../build/cleanup.bat</NMakeCleanCommandLine>
+    <NMakeOutput />
+    <NMakePreprocessorDefinitions>WIN32;_CONSOLE;_AMD64_;_DDK_;_KERNEL_MODE;_DEBUG;DBG=1;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(WDKPATH)inc\ddk;$(WDKPATH)inc\api;$(WDKPATH)inc\crt;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WLHCHECK|x64'">
+    <OutDir>$(ProjectDir)..\..\output\amd64\WLH_Debug\build\</OutDir>
+    <IntDir>$(ProjectDir)..\..\output\amd64\WLH_Debug\build\</IntDir>
+    <NMakeBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) wlh chk</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) wlh chk</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)../../build/cleanup.bat</NMakeCleanCommandLine>
+    <NMakeOutput />
+    <NMakePreprocessorDefinitions>WIN32;_CONSOLE;_AMD64_;_DDK_;_KERNEL_MODE;_DEBUG;DBG=1;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(WDKPATH)inc\ddk;$(WDKPATH)inc\api;$(WDKPATH)inc\crt;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <ExecutablePath>$(WLHBASE)\bin;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(WLHBASE)\lib\Crt\amd64;$(WLHBASE)\lib\wlh\amd64;$(WLHBASE)\lib\wdf\kmdf\amd64\1.9;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(WLHBASE)\inc\api;$(WLHBASE)\inc\crt;$(WLHBASE)\inc\ddk;$(WLHBASE)\inc\wdf\kmdf\1.9;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WXPCHECK|x64'">
+    <OutDir>$(ProjectDir)..\..\output\amd64\WXP_Debug\build\</OutDir>
+    <IntDir>$(ProjectDir)..\..\output\amd64\WXP_Debug\build\</IntDir>
+    <NMakeBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) wxp chk</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) wxp chk</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)../../build/cleanup.bat</NMakeCleanCommandLine>
+    <NMakeOutput />
+    <NMakePreprocessorDefinitions>WIN32;_CONSOLE;_AMD64_;_DDK_;_KERNEL_MODE;_DEBUG;DBG=1;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(WDKPATH)inc\ddk;$(WDKPATH)inc\api;$(WDKPATH)inc\crt;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <ExecutablePath>$(WXPBASE)\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(WXPBASE)\inc\api;$(WXPBASE)\inc\crt;$(WXPBASE)\inc\ddk;$(WXPBASE)\inc\wdf\kmdf\1.9;$(IncludePath)</IncludePath>
+    <LibraryPath>$(WXPBASE)\lib\Crt\amd64;$(WXPBASE)\lib\wxp\amd64;$(WXPBASE)\lib\wdf\kmdf\amd64\1.9;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='W7FREE|x64'">
+    <OutDir>$(ProjectDir)..\..\output\amd64\W7_Release\build\</OutDir>
+    <IntDir>$(ProjectDir)..\..\output\amd64\W7_Release\build\</IntDir>
+    <NMakeBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) win7 fre</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) win7 fre</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)../../build/cleanup.bat</NMakeCleanCommandLine>
+    <NMakeOutput />
+    <NMakePreprocessorDefinitions>WIN32;_CONSOLE;_AMD64_;_DDK_;_KERNEL_MODE;_NDEBUG;DBG=0;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(WDKPATH)inc\ddk;$(WDKPATH)inc\api;$(WDKPATH)inc\crt;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WLHFREE|x64'">
+    <OutDir>$(ProjectDir)..\..\output\amd64\WLH_Release\build\</OutDir>
+    <IntDir>$(ProjectDir)..\..\output\amd64\WLH_Release\build\</IntDir>
+    <NMakeBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) wlh fre</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) wlh fre</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)../../build/cleanup.bat</NMakeCleanCommandLine>
+    <NMakeOutput />
+    <NMakePreprocessorDefinitions>WIN32;_CONSOLE;_AMD64_;_DDK_;_KERNEL_MODE;_NDEBUG;DBG=0;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(WDKPATH)inc\ddk;$(WDKPATH)inc\api;$(WDKPATH)inc\crt;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <LibraryPath>$(WLHBASE)\lib\Crt\amd64;$(WLHBASE)\lib\wlh\amd64;$(WLHBASE)\lib\wdf\kmdf\amd64\1.9;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WXPFREE|x64'">
+    <OutDir>$(ProjectDir)..\..\output\amd64\WXP_Release\build\</OutDir>
+    <IntDir>$(ProjectDir)..\..\output\amd64\WXP_Release\build\</IntDir>
+    <NMakeBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) wxp fre</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(ProjectDir)../../build/buildall.bat $(ProjectName) wxp fre</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(ProjectDir)../../build/cleanup.bat</NMakeCleanCommandLine>
+    <NMakeOutput />
+    <NMakePreprocessorDefinitions>WIN32;_CONSOLE;_AMD64_;_DDK_;_KERNEL_MODE;_NDEBUG;DBG=0;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(WDKPATH)inc\ddk;$(WDKPATH)inc\api;$(WDKPATH)inc\crt;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <ExecutablePath>$(WXPBASE)\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(WXPBASE)\inc\api;$(WXPBASE)\inc\crt;$(WXPBASE)\inc\ddk;$(WXPBASE)\inc\wdf\kmdf\1.9;$(IncludePath)</IncludePath>
+    <LibraryPath>$(WXPBASE)\lib\Crt\amd64;$(WXPBASE)\lib\wxp\amd64;$(WXPBASE)\lib\wdf\kmdf\amd64\1.9;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='W7CHECK|x64'">
+    <BuildLog>
+      <Path>$(ProjectDir)..\..\output\amd64\W7_Debug\log\$(ProjectName)_build.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='WLHCHECK|x64'">
+    <BuildLog>
+      <Path>$(ProjectDir)..\..\output\amd64\WLH_Debug\log\$(ProjectName)_build.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='WXPCHECK|x64'">
+    <BuildLog>
+      <Path>$(ProjectDir)..\..\output\amd64\WXP_Debug\log\$(ProjectName)_build.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='W7FREE|x64'">
+    <BuildLog>
+      <Path>$(ProjectDir)..\..\output\amd64\W7_Release\log\$(ProjectName)_build.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='WLHFREE|x64'">
+    <BuildLog>
+      <Path>$(ProjectDir)..\..\output\amd64\WLH_Release\log\$(ProjectName)_build.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='WXPFREE|x64'">
+    <BuildLog>
+      <Path>$(ProjectDir)..\..\output\amd64\WXP_Release\log\$(ProjectName)_build.log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\SpyHunterDrv64\SpyHunterDrv.c" />
+    <ClCompile Include="..\..\SpyHunterDrv64\SystemVersion.c" />
+    <ClCompile Include="..\..\SpyHunterDrv64\GlobalData.c" />
+    <ClCompile Include="..\..\SpyHunterDrv64\Logger.c" />
+    <ClCompile Include="..\..\SpyHunterDrv64\Utility.c" />
+    <ClCompile Include="..\..\SpyHunterDrv64\GlobalVariables.c" />
+    <ClCompile Include="..\..\SpyHunterDrv64\MemoryAllocator.c" />
+    <ClCompile Include="..\..\SpyHunterDrv64\KernelBase.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\SpyHunterDrv64\makefile" />
+    <None Include="..\..\SpyHunterDrv64\sources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\SpyHunterDrv64\ApiDefine.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\GlobalData.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\GlobalVariables.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\KernelBase.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\LibC.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\Logger.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\MemoryAllocator.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\Stdafx.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\SystemDefine.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\SystemVersion.h" />
+    <ClInclude Include="..\..\SpyHunterDrv64\Utility.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

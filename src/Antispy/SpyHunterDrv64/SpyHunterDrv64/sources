@@ -1,0 +1,103 @@
+# $Id$
+TARGETNAME=SpyHunterDrv64
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+
+# Create browse info
+#BROWSER_INFO=1
+#BROWSERFILE=<some path>
+
+USE_RTTI          =  1
+USE_NATIVE_EH     =  ASYNC
+INCLUDES=$(INCLUDES);$(DDK_INC_PATH);
+
+# Additional defines for the C/C++ preprocessor
+C_DEFINES=$(C_DEFINES) /DNTSTRSAFE_NO_DEPRECATE /DDDK_VER=7600 /D_KERNEL_MODE /DNT_KERNEL_MODE /U_DLL
+
+!IF $(AMD64)
+
+!IF "$(DDKBUILDENV)" == "checked"
+TARGETLIBS=$(DDK_LIB_PATH)\fltMgr.lib \
+           $(DDK_LIB_PATH)\libcntpr.lib \
+           $(DDK_LIB_PATH)\ntstrsafe.lib \
+           $(DDK_LIB_PATH)\ksecdd.lib \
+           $(DDK_LIB_PATH)\ndis.lib \
+           $(DDK_LIB_PATH)\tdi.lib \
+           $(DDK_LIB_PATH)\ntoskrnl.lib \
+           $(DDK_LIB_PATH)\usbd.lib \
+           $(DDK_LIB_PATH)\hal.lib \
+           $(DDK_LIB_PATH)\fltLib.lib \
+           $(DDK_LIB_PATH)\wdmsec.lib \
+           $(DDK_LIB_PATH)\rtlver.lib \
+           $(DDK_LIB_PATH)\fwpkclnt.lib \
+           $(SDK_LIB_PATH)\uuid.lib
+!ELSE
+TARGETLIBS=$(DDK_LIB_PATH)\fltMgr.lib \
+           $(DDK_LIB_PATH)\libcntpr.lib \
+           $(DDK_LIB_PATH)\ntstrsafe.lib \
+           $(DDK_LIB_PATH)\ksecdd.lib \
+           $(DDK_LIB_PATH)\ndis.lib \
+           $(DDK_LIB_PATH)\tdi.lib \
+           $(DDK_LIB_PATH)\ntoskrnl.lib \
+           $(DDK_LIB_PATH)\usbd.lib \
+           $(DDK_LIB_PATH)\hal.lib \
+           $(DDK_LIB_PATH)\fltLib.lib \
+           $(DDK_LIB_PATH)\wdmsec.lib \
+           $(DDK_LIB_PATH)\rtlver.lib \
+           $(DDK_LIB_PATH)\fwpkclnt.lib \
+           $(SDK_LIB_PATH)\uuid.lib
+!ENDIF
+
+!ELSE
+
+!IF "$(DDKBUILDENV)" == "checked"
+TARGETLIBS=$(DDK_LIB_PATH)\fltMgr.lib \
+           $(DDK_LIB_PATH)\libcntpr.lib \
+           $(DDK_LIB_PATH)\ntstrsafe.lib \
+           $(DDK_LIB_PATH)\ksecdd.lib \
+           $(DDK_LIB_PATH)\ndis.lib \
+           $(DDK_LIB_PATH)\tdi.lib \
+           $(DDK_LIB_PATH)\ntoskrnl.lib \
+           $(DDK_LIB_PATH)\usbd.lib \
+           $(DDK_LIB_PATH)\hal.lib \
+           $(DDK_LIB_PATH)\fltLib.lib \
+           $(DDK_LIB_PATH)\wdmsec.lib \
+           $(DDK_LIB_PATH)\rtlver.lib \
+           $(DDK_LIB_PATH)\fwpkclnt.lib \
+           $(SDK_LIB_PATH)\uuid.lib
+!ELSE
+TARGETLIBS=$(DDK_LIB_PATH)\fltMgr.lib \
+           $(DDK_LIB_PATH)\libcntpr.lib \
+           $(DDK_LIB_PATH)\ntstrsafe.lib \
+           $(DDK_LIB_PATH)\ksecdd.lib \
+           $(DDK_LIB_PATH)\ndis.lib \
+           $(DDK_LIB_PATH)\tdi.lib \
+           $(DDK_LIB_PATH)\ntoskrnl.lib \
+           $(DDK_LIB_PATH)\usbd.lib \
+           $(DDK_LIB_PATH)\hal.lib \
+           $(DDK_LIB_PATH)\fltLib.lib \
+           $(DDK_LIB_PATH)\wdmsec.lib \
+           $(DDK_LIB_PATH)\rtlver.lib \
+           $(DDK_LIB_PATH)\fwpkclnt.lib \
+           $(SDK_LIB_PATH)\uuid.lib
+!ENDIF
+
+!ENDIF
+
+LINKER_FLAGS=$(LINKER_FLAGS) /integritycheck
+
+SOURCES= \
+        SpyHunterDrv.c     \
+        SystemVersion.c    \
+        GlobalData.c       \
+        Logger.c           \
+        Utility.c          \
+        GlobalVariables.c  \
+        MemoryAllocator.c  \
+        KernelBase.c       \
+        LibC.c             \
+        
+
+I386_SOURCES= \
+
+AMD64_SOURCES = \
